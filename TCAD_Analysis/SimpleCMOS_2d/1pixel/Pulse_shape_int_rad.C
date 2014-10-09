@@ -16,6 +16,7 @@ double total_time = 1e-8;
 double bin_width = total_time/bins;
 
 double bias=200;
+double res =100;
 
 double raw_data[bins+1][2];			// data from TCAD, current cleaned file
 double adapted_data[bins+1][2];			// data with leakage current subtracted, adapted array file
@@ -31,7 +32,7 @@ TMultiGraph *mg = new TMultiGraph();		// create multigraph
 
 for (double fluence=13;fluence<=15;fluence+=1){		// loop to create of graph for select bias values
 
-	TString str =TString::Format("/afs/cern.ch/work/m/mbucklan/TCAD/SimpleCMOS/DepletionSimRemesh_Particle_Rad/Rad_Current_Cleaned_bias=%.0f_Fluence=1e%.0f_200.txt",bias,fluence);		// does some magic, creates string with name of file
+	TString str =TString::Format("/afs/cern.ch/work/m/mbucklan/TCAD/SimpleCMOS/DepletionSimRemesh_Particle_Rad/Rad_ninp_1pixel_TotCurrent_res=%.0f_dose=%.0f_bias=%.0f_Fluence=1e%.0f_200.txt",bias,fluence);		// does some magic, creates string with name of file
 	
 	TString str1 =TString::Format("1e%.0f n_{eq} cm^{-2}",fluence);		// creates string with bias value
 	
