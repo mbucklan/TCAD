@@ -153,9 +153,6 @@ for (double fluence=13;fluence<=15;fluence+=1){		// loop to create of graph for 
 
 }
 	
-	
-
-
 pad1->Draw();
 pad1->cd();
 pad1->SetTickx(1);		//draws ticks on top side x axis
